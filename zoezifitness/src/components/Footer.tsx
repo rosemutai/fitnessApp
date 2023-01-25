@@ -4,9 +4,10 @@ import { faFacebook, faTwitter, faInstagram  } from '@fortawesome/free-brands-sv
 
 const Footer = () => {
   return (
-    <div className='footer p-4 md:flex md:justify-around bg-yellow-600 text-white md:relative'>
+    <div className='footer p-4 flex flex-col md:flex-row justify-center md:justify-around 
+      bg-yellow-600 text-white relative'>
       <div className="col-one flex flex-col">
-        <h5>Zoezi Fitiness</h5>
+        <h5 className='ml-1'>Zoezi Fitiness</h5>
         <div className='adress-email flex flex-col '>
           
             <div className='flex my-2'>
@@ -17,7 +18,7 @@ const Footer = () => {
                   11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" 
                 />
               </svg>
-              <p className='font-roboto text-sm font-normal not-italic md:ml-2'>P.O Box 564, Disneyland</p>
+              <p className='font-roboto text-sm font-normal not-italic ml-2'>P.O Box 564, Disneyland</p>
             </div>
 
             <div className='flex md:my-2'>
@@ -30,13 +31,13 @@ const Footer = () => {
                   0l7.5 4.04a2.25 2.25 0 011.183 1.98V19.5z"
                 />
               </svg>
-              <p className='font-roboto not-italic text-sm font-normal md:ml-2'>zoezifness@gmail.com</p>  
+              <p className='font-roboto not-italic text-sm font-normal ml-2'>zoezifness@gmail.com</p>  
             </div>
         </div>
 
       </div>
 
-      <div className="col-two md:flex md:justify-between">
+      <div className="col-two flex justify-between mt-4 md:mt-0 mb-14 md:mb-5">
         <div className="col-two-one md:mr-8">
           <h5 className='mb-2 font-bold tracking-wider'>community</h5>
           <ul>
@@ -54,6 +55,7 @@ const Footer = () => {
             <li className='mb-2'>Pricing</li>
             <li className='mb-2'>Blog</li>
             <li className='mb-2'>Careers</li>
+            <li className='mb-2'>FAQs</li>
             <li className='mb-2'>Contact</li>
           </ul>
         </div>
@@ -68,20 +70,20 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="name w-3/4 mx-auto absolute z-50 bottom-0 inset-x-12 py-2 bg-black /90 rounded-sm
+        <div className="name w-10/12 md:w-3/4 mx-auto absolute z-50 bottom-0 inset-x-12 py-2 bg-black rounded-sm
           shadow shadow-yellow-600 px-4 md:flex md:justify-between md:items-center">
-          <p className=' text-white font-light tracking-wider text-sm'>copyright &copy; 2022 zoezifitiness</p>
+          <p className=' text-white font-light tracking-wider text-sm text-center'>copyright &copy; 2022 zoezifitiness</p>
 
-           <div className='social-icons md:flex md:justify-between'>
-            <div className="facebook md:mr-3">
+           <div className='social-icons flex justify-center md:justify-between mt-2 md:mt-0'>
+            <div className="facebook mr-3">
               <FontAwesomeIcon icon={faFacebook}/>
             </div>
 
-            <div className="twitter  md:mr-3">
+            <div className="twitter  mr-3">
               <FontAwesomeIcon icon={faTwitter}/>
             </div>
 
-            <div className="instagram  md:mr-3">
+            <div className="instagram  mr-3">
               <FontAwesomeIcon icon={faInstagram}/>
             </div>
 
