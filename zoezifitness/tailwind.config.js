@@ -8,6 +8,9 @@ module.exports = {
       'roboto': ['Roboto', 'sans-serif'],
     },
     extend: {
+      transitionProperty: {
+        'width': 'width',
+      },
       colors:{
         'purplish': '#9EA4C3',
         'greyish': '#7a7771'
