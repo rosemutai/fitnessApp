@@ -67,11 +67,11 @@ const Services = () => {
 
 
   return (
-    <div className='md:w-7/12 md:mx-auto md:mt-6 h-screen bg-black0'>
-      <h2 className='text-yellow-600 text-center font-semibold text-2xl md:my-3'>Top featured Workouts</h2>
-      <div className="cards md:w-full grid md:grid-cols-3 gap-4">
+    <div className='w-11/12 md:w-7/12 mx-auto mt-6 h-screen bg-black0'>
+      <h2 className='text-yellow-600 text-center font-semibold text-xl md:text-2xl my-3'>Top featured Workouts</h2>
+      <div className="cards md:w-full grid grid-cols-2 md:grid-cols-3 gap-4">
         {cardImages.map(({id, imgSrc, title, description, style}) => (
-          <div key={id} className={ `card md:flex md:flex-col md:justify-start 
+          <div key={id} className={ `card flex flex-col justify-start 
             md:w-56 md:h-56  rounded-md border border-greyish/40 ${style}`} >
             <img src={imgSrc} className='h-3/4 ull' alt='card' />
             <h4 className='card-title px-2 text-yellow-600'>{title}</h4>
