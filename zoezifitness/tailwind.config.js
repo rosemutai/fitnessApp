@@ -8,6 +8,14 @@ module.exports = {
       'roboto': ['Roboto', 'sans-serif'],
     },
     extend: {
+      animation: {
+       shine: "shine 1s",
+      },
+      keyframes: {
+        shine: {
+          "100%": { left: "125%" },
+        },
+      },
       transitionProperty: {
         'width': 'width',
       },
@@ -22,7 +30,7 @@ module.exports = {
       spacing: {
         '45': '4.5rem',
         '55': '5.5rem',
-        '85': '8.4rem'
+        '85': '10.3rem'
       }
     },
   },
