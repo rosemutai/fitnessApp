@@ -67,7 +67,7 @@ const Services = () => {
 
 
   return (
-    <div className='w-11/12 md:w-7/12 mx-auto mt-6 h-screen bg-black0'>
+    <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto mt-6 h-screen bg-black0'>
       <h2 className='text-yellow-600 text-center font-semibold text-xl md:text-2xl my-3'>Top featured Workouts</h2>
       <div className="cards md:w-full grid grid-cols-2 md:grid-cols-3 gap-4">
         {cardImages.map(({id, imgSrc, title, description, style}) => (
