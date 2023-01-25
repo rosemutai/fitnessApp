@@ -58,8 +58,8 @@ const Testimonies = () => {
   }
 
   return (
-    <div className='w-11/12 md:w-7/12 h-80 mx-auto md:my\t-7 md:mb-12 bgyellow-600 flex 
-      mt-24 md:mt-0 rounded-t-md group' id='testimonies'>
+    <div className='w-11/12 md:w-7/12 h-80 mx-auto md:mb-12 bgyellow-600 flex 
+      mt-24 md:-mt-60 lg:-mt-2 rounded-t-md group' id='testimonies'>
       <>
         <div className="left-side image bg-no-repeat bg-cover w-1/2 relative"
           style={{backgroundImage: `url(${usersTrained[currentIndex].image})`}} >
