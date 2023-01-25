@@ -76,15 +76,21 @@ const Footer = () => {
 
            <div className='social-icons flex justify-center md:justify-between mt-2 md:mt-0'>
             <div className="facebook mr-3">
-              <FontAwesomeIcon icon={faFacebook}/>
+              <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
+                hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-yellow-600 hover:text-yellow-600' 
+                icon={faFacebook}/>
             </div>
 
             <div className="twitter  mr-3">
-              <FontAwesomeIcon icon={faTwitter}/>
+              <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
+                hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-yellow-600 hover:text-yellow-600'
+                icon={faTwitter}/>
             </div>
 
             <div className="instagram  mr-3">
-              <FontAwesomeIcon icon={faInstagram}/>
+              <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
+                hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-yellow-600 hover:text-yellow-600'
+                icon={faInstagram}/>
             </div>
 
           </div>
