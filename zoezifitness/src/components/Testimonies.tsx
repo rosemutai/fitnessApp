@@ -58,10 +58,10 @@ const Testimonies = () => {
   }
 
   return (
-    <div className='md:w-7/12 md:h-80  md:mx-auto md:my\t-7 md:mb-12 bgyellow-600 md:flex 
-      rounded-t-md group' id='testimonies'>
+    <div className='w-11/12 md:w-7/12 h-80 mx-auto md:my\t-7 md:mb-12 bgyellow-600 flex 
+      mt-24 md:mt-0 rounded-t-md group' id='testimonies'>
       <>
-        <div className="left-side image bg-no-repeat bg-cover md:w-1/2 relative mr2"
+        <div className="left-side image bg-no-repeat bg-cover w-1/2 relative"
           style={{backgroundImage: `url(${usersTrained[currentIndex].image})`}} >
           <div className="name w-3/4 mx-auto absolute z-50 -bottom-4 left-8 py-2 bg-yellow-600 rounded-sm
             shadow shadow-yellow-600">
@@ -80,17 +80,17 @@ const Testimonies = () => {
             {usersTrained.map((slide, slideIndex) => {
               return (
                 <FontAwesomeIcon key={slideIndex} onClick={() => goToSlide(slideIndex)} icon={faCircle} 
-                  className='text-sm text-yellow-600 mr-3 cursor-pointer' />
+                  className='text-xs md:text-sm text-yellow-600 mr-1 md:mr-3 cursor-pointer' />
               )
             })}
           </div>
         </div>
-        <div className="right-side md:w-1/2 m2 bglack rounded-r-md px-4">
+        <div className="right-side w-1/2 rounded-r-md px-2 md:px-4">
           <h5 className='md:text-2xl text-greyish'>Successful Trainer</h5>
-          <h5 className='md:text-xl text-yellow-600'>Feedback</h5>
-          <p className='text-greyish text-sm my-5 leading-6'>{usersTrained[currentIndex].description}</p>
-          <h5 className='md:text-sm mt-10 text-yellow-600'>{`The training ${usersTrained[currentIndex].name} has taken`}</h5>
-          <div className="name w-full mt-3  bg-black -600 rounded-sm flex">
+          <h5 className='text-sm md:text-xl text-yellow-600'>Feedback</h5>
+          <p className='text-greyish text-sm my-5 leading-5 md:leading-6'>{usersTrained[currentIndex].description}</p>
+          <h5 className='text-xs md:text-sm tracking-wide mt-1 md:mt-10 text-yellow-600'>{`The training ${usersTrained[currentIndex].name} has taken`}</h5>
+          <div className="name w-full mt-1 md:mt-3  bg-black -600 rounded-sm flex">
             <img src={usersTrained[currentIndex].imageOfExercise} className=' w-12 h-12' alt="woman working out"  />
             <p className='text-center pt-3 ml-4 text-white tracking-wider text-sm'>{usersTrained[currentIndex].titleOfExercise}</p>
           </div>
