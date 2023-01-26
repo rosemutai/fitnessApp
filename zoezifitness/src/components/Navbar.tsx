@@ -37,20 +37,20 @@ const Navbar = () => {
 
             </address>
           </div>
-          <div className='social-icons hidden md:flex justify-center space-x-3 md:space-x-2 py-4 md:py-0  md:justify-between'>
-            <div className="facebook md:mr-3">
+          <div className='social-icons hidden md:flex justify-center md:space-x-2 py-4 md:py-0  md:justify-between'>
+            <div className="facebook md:mr-1">
               <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
                 hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-white  hover:text-white'
                 icon={faFacebook}/>
             </div>
 
-            <div className="twitter  md:mr-3">
+            <div className="twitter  md:mr-4">
               <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
                 hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-white  hover:text-white'
                 icon={faTwitter}/>
             </div>
 
-            <div className="instagram  md:mr-3">
+            <div className="instagram">
               <FontAwesomeIcon className='hover:scale-110 text-white hover:transition cursor-pointer 
                 hover:rounded-full hover:animate-shine hover:shadow-md hover:shadow-white  hover:text-white'
                 icon={faInstagram}/>
