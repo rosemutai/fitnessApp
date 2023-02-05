@@ -3,9 +3,9 @@ import React from 'react'
 const Contact = () => {
   return (
     <div className='w-full min-h-screen font-roboto bg-black/90 py-8'>
-      <div className="flex justify-between md:w-6/12 mx-auto h-96 my-12">
-        <div className="left-section bg-hero w-2/5 h-8/12 my-2 py-8 bg-cover opacity-60 bg-yellow-600"></div>
-        <div className="right-section w-3/5 h-full">
+      <div className="flex flex-col md:flex-row justify-between w-10/12 md:w-6/12 mx-auto h-96 my-12">
+        <div className="left-section bg-hero w-full md:w-2/5 md:h-8/12 my-2 py-8 bg-cover opacity-60 bg-yellow-600"></div>
+        <div className="right-section w-full md:w-3/5 h-full">
           <form className="flex w-full h-full flex-col justify-between bg-black rounded-r-md">
             <div className="firstname w-11/12 ml-2 flex flex-col">
               <input type="text" name="firstname" id="firstname" autoComplete='off'
