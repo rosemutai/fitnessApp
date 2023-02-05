@@ -18,6 +18,7 @@ module.exports = {
       },
       transitionProperty: {
         'width': 'width',
+        'border': 'border',
       },
       colors:{
         'purplish': '#9EA4C3',
