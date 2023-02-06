@@ -88,9 +88,9 @@ const Navbar = () => {
                 leaveTo="opacity-0"
               >
 
-                <Link href='#home' className='md:mr-4 font-roboto text-base hover:ease-in
+                <Link to='/'  className='md:mr-4 font-roboto text-base hover:ease-in
                    hover:duration-200  transition-all duration-75 hover:text-yellow-600'>Home</Link>
-                <Link href='#about' className='md:mr-4 font-roboto text-base 
+                <Link to='about/' className='md:mr-4 font-roboto text-base 
                   hover:ease-in hover:duration-200  transition-all duration-75 hover:text-yellow-600'>About</Link>
                 
                 <Link href='#about' className='md:mr-4 font-roboto text-base hover:ease-in hover:duration-200
@@ -99,7 +99,7 @@ const Navbar = () => {
               <Link to='testimonies' spy={true} smooth={true} offset={-100} duration={500} className='md:mr-4 
                 font-roboto text-base hover:ease-in hover:duration-200  transition-all duration-75 hover:text-yellow-600 
                 cursor-pointer'>Testimonies</Link>
-              <Link href='#contact' className='md:mr-4 font-roboto text-base hover:ease-in 
+              <Link to='/contact' className='md:mr-4 font-roboto text-base hover:ease-in 
                 hover:duration-200  transition-all duration-75 hover:text-yellow-600'>Contact Us</Link>
               <div>
                 <Menu as="div" className="relative inline-block text-left">
