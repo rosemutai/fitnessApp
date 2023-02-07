@@ -15,10 +15,15 @@ const Contact = () => {
 
   return (
     <div className='w-full min-h-screen font-roboto bg-black/90 py-8'>
+       <p className='text-white border border-t-transparent  border-x-transparent border-b-yellow-600 
+        w-6/12 md:w-3/12 mx-auto tracking-widest pb-1 my-1 md:my-12 text-center'>Contact Us</p>
+          
       <div className="flex rounded-md flex-col md:flex-row justify-between w-10/12 md:w-6/12 mx-auto
-         h-[80vh] md:h-96 my-16 md:my-12">
+         h-[80vh] md:h-96 my-6 md:my-6">
         <div className="left-section bg-hero w-full md:w-2/5 h-1/4 md:h-[90%] my-auto py-8 bg-cover 
-          rounded-t-md md:rounded-none opacity-60 bg-yellow-600"></div>
+          rounded-t-md md:rounded-none opacity-60 bg-yellow-600">
+           
+          </div>
         <div className="right-section w-full md:w-3/5 h-3/4 md:h-full rounded-b-md md:rounded-none">
           <form onSubmit={handleSubmit(onSubmit)} className="flex w-full h-full flex-col justify-between bg-black rounded-r-md">
             <div className="firstname w-11/12 ml-2 flex flex-col">
