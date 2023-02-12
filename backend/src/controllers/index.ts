@@ -12,10 +12,6 @@ const createContact = async(req: Request, res: Response) => {
   } catch (error) {
      res.status(409).json({message: error.message}) 
   }
-  
-  await contactToSave.save()
-
-
 
 }
 
