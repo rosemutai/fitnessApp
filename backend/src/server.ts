@@ -4,12 +4,17 @@ const contactRouter = require("./routes/index");
 require('dotenv').config()
 
 const app = express()
+app.use(express.urlencoded({extended:true}))
+app.use(express.json())
 app.use('/api', contactRouter)
 
 const MONGOURL = process.env.MONGOURL
 const PORT = process.env.PORT
 
-mongoose.connect(MONGOURL)
+mongoose.connect(MONGOURL, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
   .then(() => {
     app.listen(PORT, () => console.log(`Server running at port ${PORT}`))
   })
