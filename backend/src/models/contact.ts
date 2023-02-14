@@ -4,7 +4,7 @@ interface IContact {
   firstName: string,
   lastName: string,
   email: string,
-  phone?: number
+  message: string
 
 }
 
@@ -12,7 +12,7 @@ const Contactschema = new Schema<IContact>({
   firstName: {type: String, required: true},
   lastName: {type: String, required: true},
   email: {type: String, required: true},
-  phone: {type: Number},
+  message: {type: String},
 
 })
 
