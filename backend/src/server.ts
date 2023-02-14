@@ -11,6 +11,7 @@ app.use('/api', contactRouter)
 const MONGOURL = process.env.MONGOURL
 const PORT = process.env.PORT
 
+mongoose.set('strictQuery', true);
 mongoose.connect(MONGOURL, {
   useNewUrlParser: true,
   useUnifiedTopology: true
