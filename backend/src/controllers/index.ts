@@ -4,11 +4,11 @@ const Contact = require('../models/contact')
 const createContact = async(req: Request, res: Response) => {
   const contact = req.body
 
-  const contactToSave = new Contact(contact)
+  const newContact = new Contact(contact)
 
   try {
-    const contact = await Contact.save(contactToSave)
-    return res.status(201).json(contact)
+    await newContact.save()
+    return res.status(201).json(newContact)
   } catch (error) {
      res.status(409).json({message: error.message}) 
   }
