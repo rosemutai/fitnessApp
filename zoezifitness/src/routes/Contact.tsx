@@ -1,17 +1,28 @@
 import React from 'react'
+import axios from 'axios'
 import { useForm, SubmitHandler } from 'react-hook-form'
 
 type FormInputs = {
   firstName: string,
   lastName: string,
   email: string,
-  phone: number
+  message: string
 }
 
 const Contact = () => {
 
-  const { register, handleSubmit, formState: {errors} } = useForm<FormInputs>()
-  const onSubmit: SubmitHandler<FormInputs> = data => console.log(data)
+  const { register, handleSubmit, reset, formState: {errors} } = useForm<FormInputs>()
+  // const onSubmit: SubmitHandler<FormInputs> = data => console.log(data)
+
+  const contactUs = ({firstName, lastName, email, message}) =>{
+    const user = {firstName, lastName, email, message}
+
+    axios.post('http://localhost:5000/api/contact', user)
+      .then((res) => console.log(res.data))
+      reset()
+      // .catch(err => console.log(err))
+
+  }
 
   return (
     <div className='w-full min-h-screen font-roboto bg-black/90 py-8'>
@@ -25,7 +36,7 @@ const Contact = () => {
            
           </div>
         <div className="right-section w-full md:w-3/5 h-3/4 md:h-full rounded-b-md md:rounded-none">
-          <form onSubmit={handleSubmit(onSubmit)} className="flex w-full h-full flex-col justify-between bg-black rounded-r-md">
+          <form onSubmit={handleSubmit(contactUs)} className="flex w-full h-full flex-col justify-between bg-black rounded-r-md">
             <div className="firstname w-11/12 ml-2 flex flex-col">
               <div className="errors">
                 {errors.firstName && <span className='text-red-500'>First Name is required</span>}
@@ -80,22 +91,21 @@ const Contact = () => {
                 peer-focus:transition-all peer-focus:ease-in peer-focus:duration-700 order-1'>Email</label>
             </div>
 
-            <div className="phone-section w-11/12 ml-2 flex flex-col">
+            <div className="message-section w-11/12 ml-2 flex flex-col">
               <div className="errors">
-                {errors.phone && <span className='text-red-500'>Invalid phone number</span>}
+                {errors.message && <span className='text-red-500'>Invalid phone number</span>}
               </div>
-              <input 
-                type="tel"
-                id="phone" 
+              <textarea
+                id="message" 
                 autoComplete='off'
                 className='w-full mb-2 md:mb-4 rounded-md mx-auto border text-greyish bg-black
                   border-x-black border-t-black border-b-yellow-600 shadow py-2
                   shadow-yellow-600  focus:transition-all focus:delay-200 focus:ease-in focus:duration-700 focus:outline-0
                   focus:border-b-greyish/40 focus:shadow-greyish/40 focus:shadow-inner peer order-2' 
-                {...register("phone", {minLength:10, maxLength:10})}
+                {...register("message")}
               />
-              <label htmlFor="firstname" className='text-greyish peer-focus:text-yellow-600 
-                peer-focus:transition-all peer-focus:ease-in peer-focus:duration-700 order-1'>Phone</label>
+              <label htmlFor="message" className='text-greyish peer-focus:text-yellow-600 
+                peer-focus:transition-all peer-focus:ease-in peer-focus:duration-700 order-1'>Message</label>
               
             </div>
             <div className="submit-btn w-11/12 ml-2 ">
