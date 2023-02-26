@@ -1,4 +1,5 @@
 import React, { Fragment, useState} from 'react'
+import { motion } from 'framer-motion'
 import { Menu, Transition } from '@headlessui/react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faTwitter, faInstagram  } from '@fortawesome/free-brands-svg-icons'
@@ -238,10 +239,13 @@ const Navbar = () => {
                 </p>
               </div>
               <div className='button  md:ml-28 py-6'>
-                <button className='text-white border-2 border-black bg-yellow-600 py-2 px-5 tracking-widerst 
-                  rounded-3xl uppercase hover:bg-black hover:border-yellow-600'>
+                <motion.button 
+                  className='text-white border-2 border-black bg-yellow-600 py-2 
+                  px-5 tracking-widerst rounded-3xl uppercase hover:bg-black hover:border-yellow-600'
+                  whileHover={{ transition: { duration: 4}, }}
+                >
                   Lets talk
-                </button>
+                </motion.button>
               </div>
              
             </div>
