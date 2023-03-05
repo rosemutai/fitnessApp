@@ -1,10 +1,16 @@
 import express, { Request, Response } from "express";
 const mongoose = require('mongoose')
 const cors = require('cors')
-const contactRouter = require("./routes/index");
 require('dotenv').config()
+const sgMail = require('@sendgrid/mail')
+const sgClient = require('@sendgrid/client')
 
+const contactRouter = require("./routes/index");
 const app = express()
+
+
+sgMail.setApiKey(process.env.SENDGRIDAPI)
+sgClient.setApiKey(process.env.SENDGRIDAPI)
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors())
