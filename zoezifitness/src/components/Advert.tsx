@@ -1,7 +1,7 @@
 import React from 'react'
 import image2 from '../images/alex.jpg'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronDown, faBars, faTimes, faDumbbell, faPercent, faChalkboardUser, faPersonWalkingArrowRight, faPerson, faPersonWalking } from '@fortawesome/free-solid-svg-icons'
+import { faDumbbell, faChalkboardUser, faPerson, faPersonWalking } from '@fortawesome/free-solid-svg-icons'
 
 type AdType = {
   id: number,

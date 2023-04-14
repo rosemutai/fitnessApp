@@ -10,7 +10,7 @@ const Navbar = () => {
   const [isShowing, setIsShowing] = useState(false)
 
   return (
-    <div className='w-full h-full'>
+    <div className='w-full h-screen'>
       <div className='top-nav flex flex-col justify-between'>
         <div className="address w-full flex flex-col md:flex-row justify-evenly py-3 text-normal 
         text-white bg-yellow-600">
