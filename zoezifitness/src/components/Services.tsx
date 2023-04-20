@@ -67,7 +67,7 @@ const Services = () => {
 
 
   return (
-    <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto mt-6 md:mt-52 h-screen bg-black0'>
+    <div className='w-11/12 md:w-9/12 lg:w-7/12 mx-auto mt-6 md:mt-60 h-screen bg-black0'>
       <h2 className='text-white border border-t-transparent  border-x-transparent border-b-yellow-600 
         w-6/12 md:w-6/12 mx-auto tracking-widest pt-4 mb-6  text-center'>Top featured Workouts</h2>
       <div className="cards md:w-full grid grid-cols-2 md:grid-cols-3 gap-4">
